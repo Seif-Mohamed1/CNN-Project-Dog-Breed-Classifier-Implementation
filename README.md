@@ -26,35 +26,27 @@ Along with exploring state-of-the-art CNN models for classification  and localiz
 
 ## CNN Structures (Building a model on my own)
 
-(conv1): Conv2d(3, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Conv2d-1         [-1, 16, 224, 224]             448
+            Conv2d-2         [-1, 32, 112, 112]           4,640
+            Conv2d-3           [-1, 64, 56, 56]          18,496
+            Conv2d-4          [-1, 128, 28, 28]          73,856
+            Linear-5                  [-1, 500]      12,544,500
+            Linear-6                  [-1, 133]          66,633
+================================================================
+Total params: 12,708,573
+Trainable params: 12,708,573
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 0.57
+Forward/backward pass size (MB): 11.49
+Params size (MB): 48.48
+Estimated Total Size (MB): 60.54
+----------------------------------------------------------------
 
-activation: relu
-
-(pool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)     
-
-activation: relu
-
-(conv2): Conv2d(32, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1)) 
-
-activation: relu
-
-(pool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False) 
-
-(conv3): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)) 
-
-(pool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False) 
-
-(dropout): Dropout(p=0.3) 
-
-(fc1): Linear(in_features=6272, out_features=500, bias=True) 
-
-(dropout): Dropout(p=0.3) 
-
-(fc2): Linear(in_features=500, out_features=133, bias=True) 
-
------
-
-​	Accuracy has been achieved up to **16%** with **20 epochs**
+​	Accuracy has been achieved up to **14%** with **50 epochs**
 
 
 
@@ -62,11 +54,11 @@ activation: relu
 
 ## Transfer Learnings
 
-Used **Resnet50** for transfer learnings
+Used **VGG16** for transfer learnings
 
 
 
-Accuracy has been achieved up to **81%** with **30 epochs**
+
 
 
 
