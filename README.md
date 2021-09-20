@@ -42,7 +42,7 @@ Along with exploring state-of-the-art CNN models for classification  and localiz
             Linear-6                  [-1, 133]          66,633
 
 
-​	Accuracy has been achieved up to **14%** with **50 epochs**
+
 
 
 
